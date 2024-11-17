@@ -15,7 +15,10 @@
     "redux": "^4.0.5",
     "redux-thunk": "^2.3.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "jest": "^27.5.1",
+    "supertest": "^7.0.0"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

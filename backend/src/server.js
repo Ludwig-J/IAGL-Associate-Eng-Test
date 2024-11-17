@@ -12,20 +12,18 @@ const server = () => {
     res.json(await todoService.getTodos());
   });
 
-  /**
-  POST /api/todo
-  {
-   "task": "Some API"
-  }
-
-   {
-    "todos": [
-      {
-        "task": "Some API"
-      }
-    ]
-   }
-  **/
+  server.post('/api/todo', async (req, res) => {
+    const todo = req.body;
+    if (!todo) {
+      return res.status(400).json({ error: 'Please add a todo' });
+    }
+    try {
+      await todoService.addTodo(todo);
+      res.status(201).json(await todoService.getTodos());
+    } catch (error) {
+      res.status(500).json({ error: 'An error occurred while adding the todo' });
+    }
+  });
 
   return server;
 };
