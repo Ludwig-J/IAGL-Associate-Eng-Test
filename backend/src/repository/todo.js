@@ -1,12 +1,14 @@
 
+
 let todoList = {
-  todos: [] 
+  todos: []
 };
 
 module.exports = {
-  getTodos: () => Promise.resolve(todoList.todos),
-
+  getTodos: () => Promise.resolve(todoList),
   addTodo: (todo) => {
-    todoList.todos.push(todo)
-  }
+    console.log("inside addTodo")
+    todoList.todos.push(todo);
+    return Promise.resolve(todoList);
+  },
 };

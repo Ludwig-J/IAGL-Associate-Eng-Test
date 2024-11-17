@@ -13,13 +13,13 @@ const server = () => {
   });
 
   server.post('/api/todo', async (req, res) => {
-    const newtodo = req.body;
-    if (!todo) {
+    const newTodo = req.body;
+    if (!newTodo) {
       return res.status(400).json({ error: 'Please add a todo' });
     }
     try {
       await todoService.addTodo(todo);
-      res.status(201).json(await todoService.addTodo(newtodo));
+      res.status(201).json(await todoService.addTodo(newTodo));
     } catch (error) {
       res.status(500).json({ error: 'An error occurred while adding the todo' });
     }

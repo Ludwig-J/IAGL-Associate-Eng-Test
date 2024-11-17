@@ -20,3 +20,9 @@ console logs added for testing
 
 ## Step 5 - MVP 1
 get a todo that has been added to render on the screen to get the app to MVP1 which is the ability to add todos
+
+## Step 6 
+add some basic styling 
+
+## Step 7
+add more testing
