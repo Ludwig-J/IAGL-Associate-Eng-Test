@@ -6,18 +6,19 @@ import {connect} from "react-redux";
 class TodoList extends Component {
   state = {};
 
-  componentDidMount() {
-    this.props.fetchTodos();
+  async componentDidMount() {
+    await this.props.fetchTodos();
   }
 
   render() {
     const {todos} = this.props.data;
+    console.log("todos", todos);
     return (<ul className="todo-list">
       {todos && todos.length
         ? todos.map((todo, index) => {
           return <Todo key={`todo-${index}`} todo={todo.task}/>;
         })
-        : "No todos, yay!"}
+        : "Add a todo"}
     </ul>);
   }
 }

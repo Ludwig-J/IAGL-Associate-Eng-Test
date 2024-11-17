@@ -17,3 +17,6 @@ Check it works using postman
 ## Step 4 
 Modify make a AddTodo component and step by step update the actions and reducer to handle the new addTodo functionality.
 console logs added for testing 
+
+## Step 5 - MVP 1
+get a todo that has been added to render on the screen to get the app to MVP1 which is the ability to add todos

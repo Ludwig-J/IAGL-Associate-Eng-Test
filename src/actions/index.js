@@ -9,6 +9,14 @@ export function fetchTodos() {
   };
 }
 
+function setTodos(data) {
+  return {
+    type: FETCH_TODOS,
+    payload: data,
+  };
+}
+
+//Function added to post the newly typed todo to the server
 export function addTodo(newTodo) {
   return async function (dispatch) {
     return axios
@@ -20,13 +28,8 @@ export function addTodo(newTodo) {
   };
 }
 
-function setTodos(data) {
-  return {
-    type: FETCH_TODOS,
-    payload: data,
-  };
-}
 
+// Function added to add the newly typed todo to the state
 function addNewTodo(data) {
   return {
     type: ADD_TODO,
