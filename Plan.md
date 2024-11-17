@@ -13,3 +13,7 @@ Add .gitignore file to not push node_modules
 Read code to understand layout and structure
 Create post route in the server.js file to add a todo to memory. Remember to add error handling
 Check it works using postman
+
+## Step 4 
+Modify make a AddTodo component and step by step update the actions and reducer to handle the new addTodo functionality.
+console logs added for testing 
