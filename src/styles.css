@@ -15,9 +15,28 @@
     margin-left: 0.5rem;
 }
 
+.input {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+    margin-right: 0.5rem;
+}
+
+.addButton {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+    background-color: #14e259;
+    color: #282c34;
+    cursor: pointer;
+}
+
 /** todo list **/
 .todo-list {
     margin-top: 2rem;
+    min-width: 40%;
     text-align: center;
     list-style: none;
     padding: 0;

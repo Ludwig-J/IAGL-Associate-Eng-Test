@@ -21,12 +21,15 @@ const AddTodo = ({ addTodo }) => {
   return (
     <form onSubmit={handleSubmit}>
       <input
+        className="input"
         type="text"
         value={task}
         onChange={handleChange}
         placeholder="Add a new todo"
       />
-      <button type="submit">Add Todo</button>
+      <button 
+      className="addButton"
+      type="submit">Add Todo</button>
     </form>
   );
 };

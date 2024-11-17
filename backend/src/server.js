@@ -12,19 +12,20 @@ const server = () => {
     res.json(await todoService.getTodos());
   });
 
+
+  // Add a new route to add a todo
   server.post('/api/todo', async (req, res) => {
     const newTodo = req.body;
     if (!newTodo) {
       return res.status(400).json({ error: 'Please add a todo' });
     }
     try {
-      await todoService.addTodo(todo);
-      res.status(201).json(await todoService.addTodo(newTodo));
+      const addedTodo = await todoService.addTodo(newTodo);
+      res.status(201).json(addedTodo);
     } catch (error) {
       res.status(500).json({ error: 'An error occurred while adding the todo' });
     }
   });
-
   return server;
 };
 module.exports = server;

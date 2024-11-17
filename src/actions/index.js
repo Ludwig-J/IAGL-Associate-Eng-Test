@@ -22,7 +22,6 @@ export function addTodo(newTodo) {
     return axios
       .post("http://localhost:9091/api/todo", newTodo)
       .then(({ data }) => {
-        console.log("data", data)
         dispatch(addNewTodo(data));
       });
   };

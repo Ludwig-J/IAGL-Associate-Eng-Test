@@ -12,7 +12,6 @@ class TodoList extends Component {
 
   render() {
     const {todos} = this.props.data;
-    console.log("todos", todos);
     return (<ul className="todo-list">
       {todos && todos.length
         ? todos.map((todo, index) => {
